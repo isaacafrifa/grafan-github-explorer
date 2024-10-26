@@ -2,7 +2,7 @@
 apiVersion: 1
 
 datasources:
-  - name: GitHub - Wanna Token Abi:)
+  - name: GitHub-WannaTokenAbi
     type: grafana-github-datasource
     jsonData:
       selectedAuthType: personal-access-token

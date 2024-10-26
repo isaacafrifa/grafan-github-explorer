@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  grafana:
+    image: grafana/grafana:10.1.0
+    container_name: grafana
+    volumes:
+      # - grafana-storage:/var/lib/grafana
+      - ./provisioning:/etc/grafana/provisioning  # Mounting provisioning directory
+      - ./grafana.ini:/etc/grafana/grafana.ini  # Mounting the configuration file
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      - GF_INSTALL_PLUGINS=grafana-github-datasource  # This line ensures the plugin is installed
+      - DATASOURCES_GITHUB_TOKEN=${DATASOURCES_GITHUB_TOKEN} # Pass the token as an env variable to be used in github.yml file
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+# volumes:
+#   grafana-storage:

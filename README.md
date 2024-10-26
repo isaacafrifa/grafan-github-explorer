@@ -5,7 +5,7 @@ This repository provides configuration files to set up a Grafana instance that l
 - Docker
 
 ### Setup:
-- Create a .env file in the root directory (not tracked in Git) with the following environment variables:
+- Create .env file in the root directory with the following environment variables:
 
   + **GRAFANA_USERNAME:** Username for Grafana access
   + **GRAFANA_PASSWORD:** Password for Grafana access
@@ -16,20 +16,20 @@ docker-compose up -d
 
 ### Access:
 
-- URL: http://localhost:3000 (port mapping might vary)
+- URL: http://localhost:3000
 - Credentials: Use the username and password from your .env file.
 
 ## Usage:
 - Log in to Grafana.
-- Navigate to Data Sources
-- Select the GitHub Data Source: Click the 'GitHub-WannaTokenAbi' data source and click 'Test'.
+- Navigate to Data Sources menu.
+- Select the 'GitHub-WannaTokenAbi' data source and click 'Test'.
 - Import the GitHub Default Dashboard:
-    + Go to the Dashboards tab (beside the Settings tab).
+    + Go to the 'Dashboards' tab (beside the Settings tab).
     + Click 'Import' button associated with 'GitHub Default'.
 - Navigate to the main Dashboards menu.
     + Select 'GitHub Default' from the dashboard list.
 - Configure the Dashboard:
-    + Load your repository details, confirm the datasource and change the Organization to <your_github_username>.
+    + To load your repository details, confirm the datasource and change the Organization to <your_github_username>.
 
 + _Enjoy :)_
     

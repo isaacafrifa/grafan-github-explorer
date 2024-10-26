@@ -34,5 +34,9 @@ docker-compose up -d
 + _Enjoy :)_
     
 
+## Screenshot 
+![Untitled](https://github.com/user-attachments/assets/c3f9f7d2-dd2c-423a-a35f-b1440810d8c2)
+
+
 ### Contribution:
 Feel free to fork this repository and contribute your own configurations or improvements.

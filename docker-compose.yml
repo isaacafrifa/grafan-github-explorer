@@ -5,7 +5,7 @@ services:
     image: grafana/grafana:10.1.0
     container_name: grafana
     volumes:
-      # - grafana-storage:/var/lib/grafana
+      - grafana-storage:/var/lib/grafana
       - ./provisioning:/etc/grafana/provisioning  # Mounting provisioning directory
       - ./grafana.ini:/etc/grafana/grafana.ini  # Mounting the configuration file
     environment:
@@ -18,5 +18,5 @@ services:
       - '3000:3000'
     restart: unless-stopped
 
-# volumes:
-#   grafana-storage:
+volumes:
+  grafana-storage:

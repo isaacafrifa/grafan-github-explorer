@@ -1,0 +1,10 @@
+# Define the data sources from which Grafana needs to gather the information to visualize
+apiVersion: 1
+
+datasources:
+  - name: GitHub - Wanna Token Abi:)
+    type: grafana-github-datasource
+    jsonData:
+      selectedAuthType: personal-access-token
+    secureJsonData:
+      accessToken: ${DATASOURCES_GITHUB_TOKEN}
